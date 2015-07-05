@@ -1,0 +1,20 @@
+application: shareit-990
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+
+- url: /bootstrap
+  static_dir: bootstrap
+  
+- url: /.*
+  script: shareit.app
+  
+libraries:
+- name: jinja2
+  version: latest
+- name: webapp2
+  version: latest
